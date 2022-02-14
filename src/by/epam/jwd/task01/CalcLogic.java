@@ -1,7 +1,5 @@
 package by.epam.jwd.task01;
 
-import java.util.Random;
-
 public class CalcLogic {
 
     public boolean fun4(int x, int y) {
@@ -19,7 +17,6 @@ public class CalcLogic {
         for (double i = a; i <= b; i += h) {
             resArray[0][j] = i;
             resArray[1][j] = Math.pow(Math.sin(i), 2) - Math.cos(2 * i);
-            //System.out.format("%10.4f|%10.4f%n", i, Math.pow(Math.sin(i), 2) - Math.cos(2 * i));
             j++;
         }
         return resArray;
@@ -40,9 +37,7 @@ public class CalcLogic {
         for(int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
                 matrix[i][j] = i % 2 == 0 ? j + 1 : n - j;
-                //System.out.print(matrix[i][j] + " ");
             }
-            //System.out.println();
         }
 
         return matrix;
