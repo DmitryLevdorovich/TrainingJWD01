@@ -14,16 +14,19 @@ public class CalcLogic {
     public double[][] calcFunctionOnSegment(double a, double b, double h) {
         double[][] resArray = new double[2][(int) ((b - a) / h + 1)];
         int j = 0;
+
         for (double i = a; i <= b; i += h) {
             resArray[0][j] = i;
             resArray[1][j] = Math.pow(Math.sin(i), 2) - Math.cos(2 * i);
             j++;
         }
+
         return resArray;
     }
 
     public int calcSumOfMultiples(int[] array, int K) {
         int sum = 0;
+
         for (int j : array) {
             if (j % K == 0)
                 sum += j;
