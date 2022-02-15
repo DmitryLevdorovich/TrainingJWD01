@@ -8,7 +8,7 @@ public class CalcLogic {
         boolean isInRectangleX = (x >= -4 && x <= 4);
         boolean isInRectangleY = (y >= -3 && y <= 0);
 
-        return (isInSquareX && isInSquareY || isInRectangleX && isInRectangleY);
+        return ((isInSquareX && isInSquareY) || (isInRectangleX && isInRectangleY));
     }
 
     public double[][] calcFunctionOnSegment(double a, double b, double h) {
@@ -36,7 +36,7 @@ public class CalcLogic {
 
         for(int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                matrix[i][j] = i % 2 == 0 ? j + 1 : n - j;
+                matrix[i][j] = (i % 2 == 0) ? (j + 1) : (n - j);
             }
         }
 
